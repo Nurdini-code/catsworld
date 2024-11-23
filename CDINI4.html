@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cat's World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+body, div {
+    font-family: 'Arial', sans-serif; font-size: 15px; text-align: center
+  }
+body, h1 class {
+    font-family: 'Arial', sans-serif; font-size: 18px; text-align: center
+  }
+body, h2 {
+    font-family: 'Arial', sans-serif; font-size: 17px; text-align: center
+  }
+body, h3 class {
+    font-family: 'Arial', sans-serif; font-size: 20px; text-align: center
+  }
+body, p {
+    font-family: 'Arial', sans-serif; font-size: 17px; text-align: center
+  }
+
+/* Sidebar */
+.w3-sidebar {
+  height: 100%; 
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.w3-sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.w3-sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.w3-sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* For small screens, show the sidebar toggle button */
+.w3-sidebar-button {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .w3-sidebar-button {
+    display: block;
+  }
+}
+
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+img {
+  float: right;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+    #comments {
+      margin-top: 20px; text-align:left
+     }
+
+</style>
+</head>
+<body>
+
+<!-- Home-->
+  <div class="w3-container w3-padding-32" id="home">
+<button class="w3-sidebar-button w3-button w3-black w3-xlarge" onclick="openSidebar()">☰</button>
+  <img src="https://img.freepik.com/premium-photo/group-cats_1108314-325060.jpg" alt="Cat" style="width:100%" height="600px">
+</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="w3-sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#Cat Breeds">Cat Breeds</a>
+  <a href="#Cat Behaviors">Cat Behaviors</a>
+  <a href="#Fun Facts">Fun Facts</a>
+  <a href="#Comments">Comments</a>
+  <a href="#End">End</a>
+</div>
+
+<!-- Sidebar content -->
+<script>
+  function openSidebar() {
+    document.getElementById("mySidebar").style.left = "0";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.left = "-250px";
+  }
+</script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>WORLD OF CATS</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#Cat Breeds" class="w3-bar-item w3-button"><b>CAT BREEDS</b></a>
+      <a href="#Cat Behaviors" class="w3-bar-item w3-button"><b>CAT BEHAVIORS</b></a>
+      <a href="#Fun Facts" class="w3-bar-item w3-button"><b>FUN FACTS</b></a>
+      <a href="#Comments" class="w3-bar-item w3-button"><b>COMMENTS</b></a>
+      <a href="#End" class="w3-bar-item w3-button"><b>END</b></a>
+    </div>
+   </div>
+  </div>
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:2000px">
+
+  <!-- Cat Breeds Section -->
+  <div class="w3-container w3-padding-32" id="Cat Breeds">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>What Are The Top Cat Breeds Nowadays?</b></h3>
+  </div>
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="Cat Breeds">
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Persian Cat</div>
+        <img src="https://makondopets.com/cdn/shop/articles/persian-cat.webp?v=1722226670" alt="Cat" style="width:100%" height="250px">
+        <p>Known for their luxurious fur and calm demeanor, Persian cats are the royalty of the feline world.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Siamese Cat</div>
+        <img src="https://cdn-aahmh.nitrocdn.com/mwIJloVUffDtKiCgRcivopdgojcJrVwT/assets/images/optimized/rev-31cad3f/www.cozycatfurniture.com/image/siamese-cat-cover.jpg" alt="Cat" style="width:100%" height="250px">
+        <p>Siamese cats are vocal, affectionate, and love to be the center of attention.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Maine Coon Cat</div>
+        <img src="https://azure.wgp-cdn.co.uk/app-yourcat/posts/maine_coon.jpg?&width=1200&height=630&mode=crop&format=webp&webp.quality=40&scale=both" alt="Cat" style="width:100%" height="250px">
+        <p>One of the largest domesticated cat breeds, known for their friendly and dog-like personalities.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Bengal Cat</div>
+        <img src="https://www.tippaws.com/cdn/shop/articles/getting-to-know-your-bengal-cat-tippaws.png?v=1729077812" alt="Cat" style="width:100%" height="250px">
+        <p>Popular With their exotic leopard-like spots, Bengal cats are active and playful.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Scottish Fold Cat</div>
+        <img src="https://petchef.my/wp-content/uploads/2024/07/petchef_cats_scottish_fold_main.webp" alt="Cat" style="width:100%" height="250px">
+	<p>Known for their folded ears that give them an owl-like appearance. Round face and sweet demeanor.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">British Shorthair</div>
+        <img src="https://cats.com/wp-content/uploads/2020/10/British-shorthair-cat-compressed-1-768x420.jpg" alt="Cat" style="width:100%" height="250px">
+	<p>Famous for its round face, dense coat, and stocky build. Calm, loyal, and independent.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Ragdoll</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQ3eSWI41GaOCj-ueGXu1zodYd0RHjbqUgseuL4PVFFAtaB9kyRQG-_LBOc6NnlOfSoA&usqp=CAU" alt="Cat" style="width:100%" height="250px">
+	<p>Famous for its Semi-long fur and striking blue eyes. Also known for "flopping" when picked up, hence the name.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Sphynx</div>
+        <img src="https://image.petmd.com/files/styles/863x625/public/2023-04/sphynx-cat.jpg" alt="Cat" style="width:100%" height="250px">
+	<p>Hairless cats with wrinkled skin and large ears. Warm to the touch and require regular skin care.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Cat Behavior Section -->
+  <div class="w3-container w3-padding-32" id="Cat Behaviors">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>These Are Some Of The Common Cat Behaviors</b></h3>
+  </div>
+
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="Cat Behaviors">
+  </div>
+
+<div class="row">
+  <div class="column">
+    <h2><b>1) Why Do Cats Purr?</b></h2>
+<img src="https://warrickvet.com/wp-content/uploads/2024/02/why-do-cats-purr.jpg" alt="Cat" style="width:99%" height="250px">
+    <p>Purring can indicate happiness or self-soothing.</p>
+    <p>Also can indicates stress or self-soothing when in pain.</p>
+  </div>
+  
+  <div class="column">
+    <h2><b>2) Cats Curiosity</b></h2>
+<img src="https://images.stockcake.com/public/b/0/a/b0a01fc7-3ecc-4d7e-ba1f-c974d9d5c1b8_large/curious-cat-peek-stockcake.jpg" alt="Cat" style="width:99%" height="250px"> 
+    <p>Curiosity keeps a cat's brain active and engaged.</p>
+    <p>They enjoy puzzles, new toys, and exploring unfamiliar places because it challenges their intelligence.</p>
+  </div>
+  
+  <div class="column">
+    <h2><b>3) Cats Sleeping Habits</b></h2>
+<img src="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/24890/583291/heroimage0.699831001651869774.jpg" alt="Cat" style="width:99%" height="250px">
+    <p>Cats are crepuscular, meaning they are most active at dawn and dusk.</p> 
+    <p>On average, cats sleep 12-16 hours a day.</p>
+    <p>It’s their way of conserving energy.</p>
+  </div>
+</div>
+
+
+<!-- Fun Facts Section -->
+  <div class="w3-container w3-padding-32" id="Fun Facts">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>!! Fun Facts !!</b></h3>
+  </div>
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="Fun Facts">
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">01</div>
+        <img src="https://s.yimg.com/ny/api/res/1.2/yJHYr2uEkk_MdxRQA0KTjQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MA--/https://media.zenfs.com/en/woman_s_world_418/6fc3102b2fcede7b894f1f4ec4945b6f" alt="Cat" style="width:100%" height="230px">
+        <p>Cats can rotate their ears 180 degrees.</p>
+      </div>
+    </div>  
+<div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">02</div>
+        <img src="https://irp.cdn-website.com/a255122d/dms3rep/multi/ThinkstockPhotos-149052633.jpg" alt="Cat" style="width:100%" height="230px">
+        <p>Cats have five toes on their front paws but only four on their back paws.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">03</div>
+        <img src="https://www.hartz.com/wp-content/uploads/2023/07/why-do-cats-have-whiskers-2000x786-1.jpg" alt="Cat" style="width:100%" height="230px">
+        <p>Cats use their whiskers to detect objects and navigate tight spaces.</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">04</div>
+        <img src="https://media.istockphoto.com/id/1193383529/photo/jumping-cat.jpg?s=612x612&w=0&k=20&c=6ZzCBNyaz4bit_dF9SIrhZAQaD9PUlmy7FEb1U5MXn8=" alt="Cat" style="width:100%" height="230px">
+        <p>Thanks to powerful hind leg muscles, they can leap up to 6 times their body height in a single bound.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Comments Section -->
+  <div class="w3-container w3-padding-32" id="Comments">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Thank You For Exploring & Please Drop Your Comments On This Website</h3>
+  </div>
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="Comments">
+  </div>
+
+<img src="https://t3.ftcdn.net/jpg/02/91/52/22/360_F_291522205_XkrmS421FjSGTMRdTrqFZPxDY19VxpmL.jpg" alt="thank you" style="width:100%" height="230px">
+  </div>
+<p><img src="https://www.shutterstock.com/shutterstock/videos/1067538551/thumb/1.jpg?ip=x480" alt="Pineapple" style="width:600px;height:200px;margin-right:10px;">
+  <div>Please submit your Comments Here</div>
+  <form id="commentForm">
+    <textarea id="comment" placeholder="Write your comment here..." required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </div>
+  
+  <div id="comments">
+    <h2>Comments:</h2>
+    <ul id="commentList"></ul>
+  </div>
+
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent page reload
+      
+      const comment = document.getElementById('comment').value;
+      if (comment) {
+        // Simulate adding the comment to a server
+        const commentList = document.getElementById('commentList');
+        const newComment = document.createElement('li');
+        newComment.textContent = comment;
+        commentList.appendChild(newComment);
+
+        // Clear the text area
+        document.getElementById('comment').value = '';
+      }
+    });
+  </script>
+  
+<!-- Image of location/map -->
+  <div class="w3-container w3-padding-32" id="End">
+   </div>
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card" id="End">
+   </div>
+  <img src="https://i.pinimg.com/originals/b8/0f/05/b80f05d17a1d0b93302055b1b83c7862.jpg" alt="Cat" style="width:100%" height="500px">
+</div>
+
+<!-- End page content -->
+  </div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>© 2024 All About Cats | Your guide to the feline world!</a></p>
+  <p>© NURDINI IZZATI | 2319938</a></p>
+</footer>
+
+</body>
+</html>
